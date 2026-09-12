@@ -20,7 +20,7 @@ export function waLink(message: string) {
 /* ------------------------------------------------------------------ */
 
 export const BUSINESS_NAME = "Glenser Interior Studio";
-export const BUSINESS_PHONE = "+91 98808 10444";
+export const BUSINESS_PHONE = "+91 74116 26375";
 export const BUSINESS_EMAIL = "hello@glenserstudio.com";
 export const BUSINESS_ADDRESS_LINE1 = "No. 42, 2nd Floor, Prestige Centre";
 export const BUSINESS_ADDRESS_LINE2 = "Richmond Road, Bengaluru 560025";
