@@ -17,6 +17,18 @@ const item = {
 export function Hero() {
   return (
     <section className="relative min-h-[92svh] w-full overflow-hidden">
+      <style>{`
+        @keyframes hero-pan {
+          0%, 100% { transform: scale(1.08) translateX(0); }
+          50%      { transform: scale(1.08) translateX(-2.5%); }
+        }
+        @media (prefers-reduced-motion: no-preference) {
+          .hero-pan { animation: hero-pan 20s ease-in-out infinite; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-pan { animation: none; }
+        }
+      `}</style>
       {/* Desktop hero image */}
       <img
         src="/assets/hero/hero-desktop.png"
@@ -29,7 +41,7 @@ export function Hero() {
       <img
         src="/assets/hero/hero-mobile.png"
         alt="Warm minimalist double-height living room"
-        className="absolute inset-0 block h-full w-full object-cover object-center sm:hidden"
+        className="hero-pan absolute inset-0 block h-full w-full object-cover object-center sm:hidden"
         fetchPriority="high"
         loading="eager"
       />
@@ -40,7 +52,7 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pb-24 pt-32 sm:px-8 sm:pb-28"
+        className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 sm:pb-28"
       >
         <motion.p
           variants={item}
@@ -56,20 +68,28 @@ export function Hero() {
         >
           Spaces Designed
           <br />
-          Around <em className="text-charcoal not-italic">You.</em>
+          Around <em className="text-ivory not-italic">You.</em>
         </motion.h1>
 
+        {/* Service tags — mobile only */}
         <motion.p
           variants={item}
-          className="mt-6 max-w-xl font-sans text-base leading-relaxed text-ivory/85 sm:text-lg"
+          className="mt-4 font-sans text-[0.68rem] uppercase tracking-[0.25em] text-ivory/70 sm:hidden"
         >
-          Warm, contemporary interiors for homes and businesses across Bengaluru — crafted
-          from real materials, honest process, and a design that starts with how you live.
+          Residential · Commercial · Kitchens
+        </motion.p>
+
+        {/* Description — desktop only */}
+        <motion.p
+          variants={item}
+          className="hidden mt-5 max-w-xl font-sans text-base leading-relaxed text-ivory/85 sm:block sm:mt-6 sm:text-lg"
+        >
+          Warm, contemporary interiors across Bengaluru — designed around how you live.
         </motion.p>
 
         <motion.div
           variants={item}
-          className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+          className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4"
         >
           <QuoteModal
             trigger={
@@ -85,25 +105,6 @@ export function Hero() {
           >
             View Our Work
           </Link>
-        </motion.div>
-
-        {/* Quick stats strip */}
-        <motion.div
-          variants={item}
-          className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-ivory/20 pt-6"
-        >
-          {[
-            { value: "120+", label: "Projects delivered" },
-            { value: "9+", label: "Years in Bengaluru" },
-            { value: "100%", label: "Turnkey, in-house" },
-          ].map((s) => (
-            <div key={s.label}>
-              <p className="font-serif text-2xl font-medium text-ivory">{s.value}</p>
-              <p className="mt-1 font-sans text-[0.72rem] uppercase tracking-[0.12em] text-ivory/70">
-                {s.label}
-              </p>
-            </div>
-          ))}
         </motion.div>
       </motion.div>
     </section>
