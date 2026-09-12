@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #faf9f6;
+  --color-charcoal: #121212;
+  --color-oak: #c4a882;
+  --color-oak-dark: #a88f6a;
+  --color-travertine: #d4c5b0;
+  --color-muted: #6b6b6b;
+  --color-cream: #f5f0eb;
+  --color-oxide: #9c4a33;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-travertine);
+    color: var(--color-charcoal);
+  }
+}
+
+/* Input autofill reset for luxury forms */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-ivory) inset;
+  -webkit-text-fill-color: var(--color-charcoal);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Slim elegant scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-travertine);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-oak);
+}
+
+/* Fine hairline utility for editorial dividers */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-charcoal),
+    transparent
+  );
+  opacity: 0.12;
+}
