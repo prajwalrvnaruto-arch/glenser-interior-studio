@@ -16,7 +16,7 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[92svh] w-full overflow-hidden">
+    <section className="relative min-h-dvh w-full overflow-hidden">
       <style>{`
         @keyframes hero-pan {
           0%, 100% { transform: scale(1.08) translateX(0); }
@@ -52,7 +52,7 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 sm:pb-28"
+        className="relative mx-auto flex min-h-dvh max-w-7xl flex-col justify-end px-5 pb-20 pt-32 sm:px-8 sm:pb-28"
       >
         <motion.p
           variants={item}
