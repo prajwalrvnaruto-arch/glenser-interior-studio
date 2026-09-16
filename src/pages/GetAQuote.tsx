@@ -66,7 +66,7 @@ export function GetAQuote() {
 
             <AnimatedSection delay={0.2}>
               <a
-                href="tel:+919880810444"
+                href="tel:+919591344715"
                 className="flex items-center gap-4 rounded-3xl border border-charcoal/8 bg-cream p-6 transition-colors hover:border-oak/40"
               >
                 <Phone className="h-5 w-5 text-oak-dark" />

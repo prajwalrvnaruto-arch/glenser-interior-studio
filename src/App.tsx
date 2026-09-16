@@ -22,23 +22,23 @@ function RouteFallback() {
   );
 }
 
-const SITE_NAME = "Glenser Interior Studio";
+const SITE_NAME = "Prakash Interior Decors";
 
 const ROUTE_META: Record<string, { title: string; description: string }> = {
   "/": {
-    title: `${SITE_NAME} — Spaces Designed Around You.`,
+    title: `${SITE_NAME} — Interior Design & Decoration in Bengaluru.`,
     description:
-      "Bengaluru's interior design and architecture studio crafting warm, contemporary spaces designed around you. Residential, commercial, modular kitchens and more.",
+      "Prakash Interior Decors — Professional interior design and decoration services in Kalyan Nagar, Bengaluru. Residential, commercial, modular kitchens and more.",
   },
   "/about": {
     title: `About Us — ${SITE_NAME}`,
     description:
-      "Meet Glenser Interior Studio — a Bengaluru-based interior design and architecture practice dedicated to crafting warm, contemporary spaces.",
+      "Meet Prakash Interior Decors — a Bengaluru-based interior design and decoration practice dedicated to crafting beautiful, functional spaces.",
   },
   "/services": {
     title: `Our Services — ${SITE_NAME}`,
     description:
-      "Interior design, modular kitchens, bedroom interiors, commercial spaces, architecture and renovation — explore what we do at Glenser Studio.",
+      "Interior design, modular kitchens, bedroom interiors, commercial spaces, and renovation — explore what we do at Prakash Interior Decors.",
   },
   "/projects": {
     title: `Our Projects — ${SITE_NAME}`,
@@ -48,12 +48,12 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
   "/process": {
     title: `Our Process — ${SITE_NAME}`,
     description:
-      "From initial consultation to final handover — discover the four-step design process behind every Glenser Studio project.",
+      "From initial consultation to final handover — discover the four-step design process behind every Prakash Interior Decors project.",
   },
   "/contact": {
     title: `Contact Us — ${SITE_NAME}`,
     description:
-      "Get in touch with Glenser Interior Studio in Bengaluru — phone, email, WhatsApp, or visit our studio on Richmond Road.",
+      "Get in touch with Prakash Interior Decors in Kalyan Nagar, Bengaluru — phone, email, WhatsApp, or visit our studio.",
   },
   "/get-a-quote": {
     title: `Get a Quote — ${SITE_NAME}`,

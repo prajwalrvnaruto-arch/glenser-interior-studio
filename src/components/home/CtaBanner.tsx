@@ -44,7 +44,7 @@ export function CtaBanner() {
             }
           />
           <a
-            href="tel:+919880810444"
+            href="tel:+919591344715"
             className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-ivory/35 px-9 font-sans text-base font-medium text-ivory backdrop-blur-sm transition-all duration-300 hover:border-ivory hover:bg-ivory/10"
           >
             <Phone className="h-4 w-4" />

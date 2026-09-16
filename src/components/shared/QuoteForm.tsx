@@ -180,8 +180,8 @@ export function QuoteForm({ compact = false, className, initialProjectType = "" 
         className="hidden"
       />
       <input type="hidden" name="access_key" value={FORM_ACCESS_KEY} />
-      <input type="hidden" name="subject" value="New Quote Request — Glenser Interior Studio" />
-      <input type="hidden" name="from_name" value="Glenser Interior Studio Website" />
+      <input type="hidden" name="subject" value="New Quote Request — Prakash Interior Decors" />
+      <input type="hidden" name="from_name" value="Prakash Interior Decors Website" />
 
       <div className={cn("grid gap-6", !compact && "sm:grid-cols-2")}>
         <div className="space-y-1.5">

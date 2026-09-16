@@ -11,7 +11,7 @@ export function WhatsAppButton() {
       href={waLink(WHATSAPP_GREETING)}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Glenser Interior Studio on WhatsApp"
+      aria-label="Chat with Prakash Interior Decors on WhatsApp"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1.2, duration: 0.4, ease: "easeOut" }}

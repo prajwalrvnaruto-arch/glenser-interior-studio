@@ -110,8 +110,8 @@ function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-7">
       <input type="hidden" name="access_key" value={FORM_ACCESS_KEY} />
-      <input type="hidden" name="subject" value="New Contact Message — Glenser Interior Studio" />
-      <input type="hidden" name="from_name" value="Glenser Interior Studio Website" />
+      <input type="hidden" name="subject" value="New Contact Message — Prakash Interior Decors" />
+      <input type="hidden" name="from_name" value="Prakash Interior Decors Website" />
       <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
 
       <div className="grid gap-7 sm:grid-cols-2">
@@ -236,7 +236,7 @@ export function Contact() {
           {/* Details */}
           <div className="space-y-4">
             <a
-              href="tel:+919880810444"
+              href="tel:+919591344715"
               className="group flex items-start gap-5 rounded-3xl border border-charcoal/8 bg-cream p-7 transition-colors hover:border-oak/40"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-oak/15 text-oak-dark">
@@ -252,7 +252,7 @@ export function Contact() {
             </a>
 
             <a
-              href="mailto:hello@glenserstudio.com"
+              href="mailto:deepakmalviya185@gmail.com"
               className="flex items-start gap-5 rounded-3xl border border-charcoal/8 bg-cream p-7 transition-colors hover:border-oak/40"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-oak/15 text-oak-dark">
@@ -301,7 +301,7 @@ export function Contact() {
         <AnimatedSection className="mt-16">
           <div className="overflow-hidden rounded-3xl border border-charcoal/8 shadow-sm">
             <iframe
-              title="Glenser Interior Studio — Richmond Road, Bengaluru"
+              title="Prakash Interior Decors — Kalyan Nagar, Bengaluru"
               src={GOOGLE_MAPS_EMBED_URL}
               className="h-[26rem] w-full"
               loading="lazy"

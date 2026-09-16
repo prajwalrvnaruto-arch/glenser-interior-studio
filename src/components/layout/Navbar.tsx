@@ -54,8 +54,8 @@ export function Navbar() {
         {/* Brand */}
         <Link to="/" className="relative z-[51] flex items-center">
           <img
-            src="/assets/brand/wordmark.png"
-            alt="Glenser Interior Studio"
+            src="/assets/brand/wordmark.svg"
+            alt="Prakash Interior Decors"
             className="h-9 w-auto object-contain"
             loading="eager"
           />
@@ -92,7 +92,7 @@ export function Navbar() {
         {/* CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
-            href="tel:+919880810444"
+            href="tel:+919591344715"
             className="hidden items-center gap-2 font-sans text-sm font-medium text-charcoal transition-colors hover:text-oak-dark xl:flex"
           >
             <Phone className="h-4 w-4" />
@@ -179,7 +179,7 @@ export function Navbar() {
                   }
                 />
                 <a
-                  href="tel:+919880810444"
+                  href="tel:+919591344715"
                   className="flex h-12 items-center justify-center gap-2 rounded-full border border-charcoal/15 font-sans text-sm font-medium text-charcoal"
                 >
                   <Phone className="h-4 w-4" />

@@ -27,8 +27,8 @@ export function Footer() {
           {/* Brand + blurb */}
           <div className="lg:col-span-5">
             <img
-              src="/assets/brand/wordmark.png"
-              alt="Glenser Interior Studio"
+              src="/assets/brand/wordmark.svg"
+              alt="Prakash Interior Decors"
               className="h-11 w-auto object-contain brightness-0 invert"
               loading="lazy"
             />
@@ -95,7 +95,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+919880810444"
+                  href="tel:+919591344715"
                   className="flex items-center gap-3 transition-colors hover:text-ivory"
                 >
                   <Phone className="h-4.5 w-4.5 shrink-0 text-oak" />
@@ -104,7 +104,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@glenserstudio.com"
+                  href="mailto:deepakmalviya185@gmail.com"
                   className="flex items-center gap-3 transition-colors hover:text-ivory"
                 >
                   <Mail className="h-4.5 w-4.5 shrink-0 text-oak" />

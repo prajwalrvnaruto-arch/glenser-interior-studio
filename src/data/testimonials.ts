@@ -8,7 +8,7 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Glenser took a 2 BHK we'd lived in for six years and made it feel like a brand-new home. They managed everything — civil, electrics, kitchen — so we never once had to chase vendors.",
+      "Prakash took a 2 BHK we'd lived in for six years and made it feel like a brand-new home. They managed everything — civil, electrics, kitchen — so we never once had to chase vendors.",
     name: "Ananya & Rohan Iyer",
     context: "Homeowners",
     project: "Contemporary Bengaluru Residence",

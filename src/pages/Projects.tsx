@@ -11,9 +11,16 @@ const FILTERS = ["All", "Residential", "Commercial", "Apartment"] as const;
 type Filter = (typeof FILTERS)[number];
 
 const COMPLETED_IMAGES = Array.from(
-  { length: 26 },
-  (_, i) => `/assets/completed/unnamed${i === 0 ? "" : ` (${i})`}.webp`
+  { length: 80 },
+  (_, i) => `/assets/completed/completed-${String(i + 1).padStart(2, "0")}.jpg`
 );
+
+const WALKTHROUGH_VIDEOS = [
+  { src: "/assets/videos/walkthrough-1.mp4", poster: "/assets/completed/completed-01.jpg" },
+  { src: "/assets/videos/walkthrough-2.mp4", poster: "/assets/completed/completed-02.jpg" },
+  { src: "/assets/videos/walkthrough-3.mp4", poster: "/assets/completed/completed-03.jpg" },
+  { src: "/assets/videos/walkthrough-4.mp4", poster: "/assets/completed/completed-04.jpg" },
+];
 
 export function Projects() {
   const [filter, setFilter] = React.useState<Filter>("All");
@@ -107,6 +114,42 @@ export function Projects() {
         </motion.div>
       </section>
 
+      {/* Completed project walkthroughs */}
+      <section className="bg-charcoal py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <AnimatedSection>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div className="max-w-xl">
+                <p className="font-sans text-[0.7rem] uppercase tracking-[0.3em] text-oak">
+                  Walkthroughs
+                </p>
+                <h2 className="mt-3 font-serif text-3xl font-medium text-ivory sm:text-4xl">
+                  Step inside the finished spaces
+                </h2>
+              </div>
+              <p className="font-sans text-sm text-ivory/60">
+                {WALKTHROUGH_VIDEOS.length} completed project videos
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {WALKTHROUGH_VIDEOS.map((video, i) => (
+              <AnimatedSection key={video.src} delay={Math.min(i * 0.06, 0.3)}>
+                <video
+                  src={video.src}
+                  poster={video.poster}
+                  controls
+                  preload="metadata"
+                  playsInline
+                  className="aspect-video w-full rounded-2xl bg-charcoal/40 object-cover shadow-lg ring-1 ring-ivory/10"
+                />
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Completed projects gallery */}
       <section className="bg-cream py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -136,7 +179,7 @@ export function Projects() {
                 >
                   <img
                     src={src}
-                    alt={`Glenser completed project — Bengaluru ${i + 1}`}
+                    alt={`Prakash Interior Decors completed project — Bengaluru ${i + 1}`}
                     loading="lazy"
                     className="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                   />

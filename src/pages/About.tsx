@@ -53,7 +53,7 @@ export function About() {
             <em className="text-oak not-italic">inevitably</em> yours.
           </>
         }
-        description="Glenser Interior Studio is a Bengaluru studio that believes great design is measured in how a space feels — not how it photographs."
+        description="Prakash Interior Decors is a Bengaluru studio that believes great design is measured in how a space feels — not how it photographs."
         image="/assets/about/studio.png"
       />
 
@@ -63,7 +63,7 @@ export function About() {
           <AnimatedSection>
             <img
               src="/assets/about/exterior.png"
-              alt="Glenser Interior Studio — modern glass entrance with landscaping"
+              alt="Prakash Interior Decors — modern glass entrance with landscaping"
               loading="lazy"
               className="aspect-[4/5] w-full rounded-3xl object-cover"
             />
@@ -77,9 +77,9 @@ export function About() {
             <AnimatedSection delay={0.1}>
               <div className="mt-7 space-y-5 font-sans text-base leading-relaxed text-muted">
                 <p>
-                  Glenser began in 2017 in a small studio off Richmond Road, with a simple
-                  conviction: that the spaces we live in should feel like a warm, quiet
-                  extension of the people who live in them.
+                  Prakash Interior Decors began in 2017 in a small studio in Bengaluru, with
+                  a simple conviction: that the spaces we live in should feel like a warm,
+                  quiet extension of the people who live in them.
                 </p>
                 <p>
                   Today, our team of designers, architects and execution specialists has
