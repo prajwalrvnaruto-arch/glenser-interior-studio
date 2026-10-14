@@ -59,7 +59,7 @@ export function Hero() {
           className="mb-5 flex items-center gap-3 font-sans text-[0.7rem] uppercase tracking-[0.32em] text-ivory/85"
         >
           <span className="h-px w-10 bg-oak" />
-          Interior Design &amp; Architecture · Bengaluru
+          Architecture · Construction · Interiors · Bengaluru
         </motion.p>
 
         <motion.h1
@@ -76,7 +76,7 @@ export function Hero() {
           variants={item}
           className="mt-4 font-sans text-[0.68rem] uppercase tracking-[0.25em] text-ivory/70 sm:hidden"
         >
-          Residential · Commercial · Kitchens
+          Architecture · Construction · Interiors
         </motion.p>
 
         {/* Description — desktop only */}

@@ -18,7 +18,7 @@ export function Services() {
             <em className="text-oak not-italic">accountable</em> studio.
           </>
         }
-        description="Six practice areas under one roof — so your project moves forward without you ever having to translate between architect, contractor and designer."
+        description="Five practice areas under one roof — so your project moves forward without you ever having to translate between architect, contractor and designer."
         image="/assets/services/residential.png"
       />
 
@@ -48,7 +48,7 @@ export function Services() {
                       <Icon className="h-5.5 w-5.5" />
                     </span>
                     <p className="mt-6 font-sans text-[0.7rem] uppercase tracking-[0.3em] text-oak-dark">
-                      {String(i + 1).padStart(2, "0")} / 06
+                      {String(i + 1).padStart(2, "0")} / {String(SERVICES.length).padStart(2, "0")}
                     </p>
                     <h2 className="mt-2 font-serif text-3xl font-medium text-charcoal sm:text-4xl">
                       {service.title}

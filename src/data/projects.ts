@@ -87,23 +87,4 @@ export const PROJECTS: Project[] = [
       "/assets/portfolio/project04-conference.png",
     ],
   },
-  {
-    id: "indiranagar-bhk",
-    title: "1 BHK Apartment",
-    location: "Indiranagar, Bengaluru",
-    category: "Apartment",
-    area: "1,080 sq. ft.",
-    year: "2024",
-    brief:
-      "An efficient, beautifully planned 1 BHK for a young professional — every inch of storage planned before a single finish was chosen.",
-    outcome:
-      "A bright, low-maintenance home with a full-height wardrobe system, a compact modular kitchen and a restful child's room.",
-    cover: "/assets/portfolio/bhk-living.webp",
-    images: [
-      "/assets/portfolio/bhk-living.webp",
-      "/assets/portfolio/bhk-kitchen.webp",
-      "/assets/portfolio/bhk-bathroom.webp",
-      "/assets/portfolio/bhk-kids.webp",
-    ],
-  },
 ];

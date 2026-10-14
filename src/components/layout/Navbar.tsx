@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { BUSINESS_PHONE } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { QuoteModal } from "@/components/shared/QuoteModal";
+import { Logo } from "@/components/shared/Logo";
 
 const NAV_LINKS = [
   { to: "/", label: "Home" },
@@ -13,6 +14,7 @@ const NAV_LINKS = [
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
   { to: "/process", label: "Our Process" },
+  { to: "/pricing", label: "Pricing" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -53,12 +55,7 @@ export function Navbar() {
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-5 sm:px-8">
         {/* Brand */}
         <Link to="/" className="relative z-[51] flex items-center">
-          <img
-            src="/assets/brand/wordmark.png"
-            alt="Glenser Interior Studio"
-            className="h-9 w-auto object-contain"
-            loading="eager"
-          />
+          <Logo className="text-xl sm:text-2xl" />
         </Link>
 
         {/* Desktop nav */}
@@ -92,7 +89,7 @@ export function Navbar() {
         {/* CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
-            href="tel:+919880810444"
+            href="tel:+918041238890"
             className="hidden items-center gap-2 font-sans text-sm font-medium text-charcoal transition-colors hover:text-oak-dark xl:flex"
           >
             <Phone className="h-4 w-4" />
@@ -179,7 +176,7 @@ export function Navbar() {
                   }
                 />
                 <a
-                  href="tel:+919880810444"
+                  href="tel:+918041238890"
                   className="flex h-12 items-center justify-center gap-2 rounded-full border border-charcoal/15 font-sans text-sm font-medium text-charcoal"
                 >
                   <Phone className="h-4 w-4" />

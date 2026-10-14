@@ -10,10 +10,38 @@ import { cn } from "@/lib/utils";
 const FILTERS = ["All", "Residential", "Commercial", "Apartment"] as const;
 type Filter = (typeof FILTERS)[number];
 
-const COMPLETED_IMAGES = Array.from(
-  { length: 26 },
-  (_, i) => `/assets/completed/unnamed${i === 0 ? "" : ` (${i})`}.webp`
-);
+// Reuses photography already shot for the site (portfolio, services, studio
+// and process pages) now that the dedicated "completed" gallery images have
+// been removed.
+const COMPLETED_IMAGES = [
+  "/assets/portfolio/project01-lux-living.png",
+  "/assets/portfolio/project01-living.png",
+  "/assets/portfolio/project01-kitchen.png",
+  "/assets/portfolio/project01-bedroom.png",
+  "/assets/portfolio/project01-console.png",
+  "/assets/portfolio/project02-living.png",
+  "/assets/portfolio/project02-dining.png",
+  "/assets/portfolio/project02-kitchen.png",
+  "/assets/portfolio/project02-bedroom.png",
+  "/assets/portfolio/project03-villa.png",
+  "/assets/portfolio/project03-sunlit.png",
+  "/assets/portfolio/project03-dining.png",
+  "/assets/portfolio/project04-reception.png",
+  "/assets/portfolio/project04-office.png",
+  "/assets/portfolio/project04-conference.png",
+  "/assets/services/architecture.png",
+  "/assets/services/residential.png",
+  "/assets/services/commercial.png",
+  "/assets/services/kitchen.png",
+  "/assets/services/bedroom.png",
+  "/assets/services/renovation.png",
+  "/assets/about/exterior.png",
+  "/assets/about/studio.png",
+  "/assets/process/consultation.png",
+  "/assets/process/design.png",
+  "/assets/process/execution.png",
+  "/assets/process/handover.png",
+];
 
 export function Projects() {
   const [filter, setFilter] = React.useState<Filter>("All");
@@ -136,7 +164,7 @@ export function Projects() {
                 >
                   <img
                     src={src}
-                    alt={`Glenser completed project — Bengaluru ${i + 1}`}
+                    alt={`Lines & Designs completed project — Bengaluru ${i + 1}`}
                     loading="lazy"
                     className="w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                   />

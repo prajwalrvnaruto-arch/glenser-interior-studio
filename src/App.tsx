@@ -10,6 +10,7 @@ const ProjectDetail = lazy(() =>
   import("@/pages/ProjectDetail").then((m) => ({ default: m.ProjectDetail }))
 );
 const Process = lazy(() => import("@/pages/Process").then((m) => ({ default: m.Process })));
+const Pricing = lazy(() => import("@/pages/Pricing").then((m) => ({ default: m.Pricing })));
 const Contact = lazy(() => import("@/pages/Contact").then((m) => ({ default: m.Contact })));
 const GetAQuote = lazy(() => import("@/pages/GetAQuote").then((m) => ({ default: m.GetAQuote })));
 
@@ -22,7 +23,7 @@ function RouteFallback() {
   );
 }
 
-const SITE_NAME = "Glenser Interior Studio";
+const SITE_NAME = "Lines & Designs";
 
 const ROUTE_META: Record<string, { title: string; description: string }> = {
   "/": {
@@ -33,12 +34,12 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
   "/about": {
     title: `About Us — ${SITE_NAME}`,
     description:
-      "Meet Glenser Interior Studio — a Bengaluru-based interior design and architecture practice dedicated to crafting warm, contemporary spaces.",
+      "Meet Lines & Designs — a Bengaluru-based architecture, construction and interior design practice dedicated to crafting warm, contemporary spaces.",
   },
   "/services": {
     title: `Our Services — ${SITE_NAME}`,
     description:
-      "Interior design, modular kitchens, bedroom interiors, commercial spaces, architecture and renovation — explore what we do at Glenser Studio.",
+      "Architecture, design, estimation, civil construction and interior execution — explore what we do at Lines & Designs.",
   },
   "/projects": {
     title: `Our Projects — ${SITE_NAME}`,
@@ -48,12 +49,17 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
   "/process": {
     title: `Our Process — ${SITE_NAME}`,
     description:
-      "From initial consultation to final handover — discover the four-step design process behind every Glenser Studio project.",
+      "From initial consultation to final handover — discover the four-step design process behind every Lines & Designs project.",
+  },
+  "/pricing": {
+    title: `Pricing — ${SITE_NAME}`,
+    description:
+      "Transparent architectural design and home construction packages from Lines & Designs — per-square-foot rates, no surprises.",
   },
   "/contact": {
     title: `Contact Us — ${SITE_NAME}`,
     description:
-      "Get in touch with Glenser Interior Studio in Bengaluru — phone, email, WhatsApp, or visit our studio on Richmond Road.",
+      "Get in touch with Lines & Designs in Bengaluru — phone, email, WhatsApp, or visit our studio on Richmond Road.",
   },
   "/get-a-quote": {
     title: `Get a Quote — ${SITE_NAME}`,
@@ -128,6 +134,14 @@ export default function App() {
             element={
               <Suspense fallback={<RouteFallback />}>
                 <Process />
+              </Suspense>
+            }
+          />
+          <Route
+            path="pricing"
+            element={
+              <Suspense fallback={<RouteFallback />}>
+                <Pricing />
               </Suspense>
             }
           />

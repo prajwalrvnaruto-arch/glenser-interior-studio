@@ -8,6 +8,7 @@ import {
   BUSINESS_ADDRESS_LINE2,
   BUSINESS_HOURS,
 } from "@/lib/utils";
+import { Logo } from "@/components/shared/Logo";
 
 const FOOTER_LINKS = [
   { to: "/", label: "Home" },
@@ -15,6 +16,7 @@ const FOOTER_LINKS = [
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
   { to: "/process", label: "Our Process" },
+  { to: "/pricing", label: "Pricing" },
   { to: "/contact", label: "Contact" },
   { to: "/get-a-quote", label: "Get a Quote" },
 ];
@@ -26,16 +28,11 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           {/* Brand + blurb */}
           <div className="lg:col-span-5">
-            <img
-              src="/assets/brand/wordmark.png"
-              alt="Glenser Interior Studio"
-              className="h-11 w-auto object-contain brightness-0 invert"
-              loading="lazy"
-            />
+            <Logo invert className="text-2xl" />
             <p className="mt-6 max-w-md font-sans text-sm leading-relaxed text-ivory/60">
-              A Bengaluru interior design &amp; architecture studio crafting warm,
-              contemporary spaces designed around you — from concept and moodboards
-              to the final coat of finish.
+              A Bengaluru architecture, construction &amp; interior design studio
+              crafting warm, contemporary spaces designed around you — from concept
+              and drawings to the final coat of finish.
             </p>
             <div className="mt-7 flex items-center gap-3">
               <a
@@ -95,7 +92,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+919880810444"
+                  href="tel:+918041238890"
                   className="flex items-center gap-3 transition-colors hover:text-ivory"
                 >
                   <Phone className="h-4.5 w-4.5 shrink-0 text-oak" />
@@ -104,7 +101,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@glenserstudio.com"
+                  href={`mailto:${BUSINESS_EMAIL}`}
                   className="flex items-center gap-3 transition-colors hover:text-ivory"
                 >
                   <Mail className="h-4.5 w-4.5 shrink-0 text-oak" />

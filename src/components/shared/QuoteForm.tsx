@@ -22,12 +22,11 @@ import { FieldError } from "@/components/shared/FieldError";
 import { invalidEmailMessage, invalidPhoneMessage } from "@/lib/validation";
 
 export const PROJECT_TYPES = [
-  "Residential Interiors",
-  "Commercial Interiors",
-  "Modular Kitchen",
-  "Bedroom Interiors",
-  "Full Home Makeover",
-  "Renovation",
+  "Architecture",
+  "Design",
+  "Estimation",
+  "Civil Construction",
+  "Interior Designing & Execution",
   "Other",
 ] as const;
 
@@ -180,8 +179,8 @@ export function QuoteForm({ compact = false, className, initialProjectType = "" 
         className="hidden"
       />
       <input type="hidden" name="access_key" value={FORM_ACCESS_KEY} />
-      <input type="hidden" name="subject" value="New Quote Request — Glenser Interior Studio" />
-      <input type="hidden" name="from_name" value="Glenser Interior Studio Website" />
+      <input type="hidden" name="subject" value="New Quote Request — Lines & Designs" />
+      <input type="hidden" name="from_name" value="Lines & Designs Website" />
 
       <div className={cn("grid gap-6", !compact && "sm:grid-cols-2")}>
         <div className="space-y-1.5">

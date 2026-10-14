@@ -1,11 +1,10 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  Home,
-  Building2,
-  ChefHat,
-  BedDouble,
-  Ruler,
-  Hammer,
+  Compass,
+  PenTool,
+  Calculator,
+  HardHat,
+  Sofa,
 } from "lucide-react";
 
 export interface Service {
@@ -20,93 +19,83 @@ export interface Service {
 
 export const SERVICES: Service[] = [
   {
-    id: "residential",
-    title: "Residential Interiors",
-    short: "Complete homes crafted around how you live.",
-    description:
-      "From apartment makeovers to sprawling villas, we design warm, liveable interiors that reflect your rhythm of life. Every room is planned around natural light, proportion, and the way your family actually uses the space each day.",
-    icon: Home,
-    image: "/assets/services/residential.png",
-    features: [
-      "Turnkey 1, 2 & 3 BHK interiors",
-      "Custom furniture & joinery",
-      "Soft furnishing & styling",
-      "Smart home integration",
-    ],
-  },
-  {
-    id: "commercial",
-    title: "Commercial Interiors",
-    short: "Workspaces that welcome clients and inspire teams.",
-    description:
-      "Offices, retail, cafés and wellness studios — spaces that carry your brand into three dimensions. We balance aesthetics with durability and acoustics, delivering environments where people focus, connect, and stay.",
-    icon: Building2,
-    image: "/assets/services/commercial.png",
-    features: [
-      "Office fit-outs & reception design",
-      "Retail & hospitality interiors",
-      "Brand-aligned material palettes",
-      "ERG-compliant workstations",
-    ],
-  },
-  {
-    id: "modular-kitchen",
-    title: "Modular Kitchen",
-    short: "Beautifully engineered kitchens built to cook in.",
-    description:
-      "The heart of your home deserves precision. Our modular kitchens pair high-performance carpentry with intelligent storage, hard-wearing surfaces, and layouts that make cooking, entertaining and tidying effortless.",
-    icon: ChefHat,
-    image: "/assets/services/kitchen.png",
-    features: [
-      "Complete turnkey kitchen design",
-      "Premium hardware & soft-close",
-      "Water-resistant & fire-safe materials",
-      "Smart storage planning",
-    ],
-  },
-  {
-    id: "bedroom",
-    title: "Bedroom Interiors",
-    short: "Calm, restful retreats for the end of a Bangalore day.",
-    description:
-      "A bedroom should feel like a deep breath. We layer textiles, lighting and joinery into restful retreats — with wardrobe design, headboard detailing and ambient lighting tuned for true relaxation.",
-    icon: BedDouble,
-    image: "/assets/services/bedroom.png",
-    features: [
-      "Bespoke wardrobes & vanities",
-      "Bedroom & lighting design",
-      "Window treatments",
-      "Children's room design",
-    ],
-  },
-  {
     id: "architecture",
-    title: "Architecture & Space Planning",
+    title: "Architecture",
     short: "Smarter layouts before a single wall goes up.",
     description:
-      "Great interiors begin with great bones. Our architects rethink circulation, daylight and storage at the planning stage — so the finished space feels larger, lighter and far more generous than its square footage.",
-    icon: Ruler,
+      "Every project starts with a thorough read of the site. Our architects inspect, mark and plan before a line is drawn — so the finished structure feels larger, lighter and far more generous than its square footage.",
+    icon: Compass,
     image: "/assets/services/architecture.png",
     features: [
-      "Space planning & layouts",
-      "Structural & permit drawings",
-      "Façade & elevation design",
-      "Vastu-conscious planning",
+      "Inspection of site",
+      "Marking",
+      "Designing",
+      "Supervision",
     ],
   },
   {
-    id: "renovation",
-    title: "Renovation & Execution",
-    short: "Precise execution teams that deliver on time.",
+    id: "design",
+    title: "Design",
+    short: "Concepts you can see before a brick is laid.",
     description:
-      "Ideas only matter when they're built well. Our in-house execution crew manages civil work, false ceilings, electrical, plumbing and finishing from a single point of contact — with on-site quality checks at every milestone.",
-    icon: Hammer,
+      "From floor plans to photorealistic 3D views, our design team translates your brief into a complete visual story — refined with you until every room feels right on paper.",
+    icon: PenTool,
+    image: "/assets/services/kitchen.png",
+    features: [
+      "2D floor plans & layouts",
+      "3D visualisation & walkthroughs",
+      "Material & finish selection",
+      "Design revisions with you",
+    ],
+  },
+  {
+    id: "estimation",
+    title: "Estimation",
+    short: "Transparent costing before you commit.",
+    description:
+      "Know what you're spending and why. Our estimation team breaks every project into an itemised, material-wise cost sheet, so there are no surprises between the first drawing and the last coat of paint.",
+    icon: Calculator,
+    image: "/assets/services/commercial.png",
+    features: [
+      "Detailed quantity & cost estimates",
+      "Material & brand specification",
+      "Itemised bill of quantities",
+      "Budget planning & phasing",
+    ],
+  },
+  {
+    id: "civil-construction",
+    title: "Civil Construction",
+    short: "Built right, from foundation to finish.",
+    description:
+      "A single, accountable team for every kind of build — commercial, residential, farm houses, renovations and infrastructure — managed on-site from groundwork to handover.",
+    icon: HardHat,
     image: "/assets/services/renovation.png",
     features: [
-      "Single-point project management",
-      "Civil, electrical & plumbing",
-      "False ceiling & flooring",
-      "On-site QC & daily updates",
+      "Commercial buildings",
+      "Residential buildings",
+      "Farm houses",
+      "Renovation of houses",
+      "Layout marking & infrastructure development",
+    ],
+  },
+  {
+    id: "interior-execution",
+    title: "Interior Designing & Execution",
+    short: "Designed, built and styled under one roof.",
+    description:
+      "From the first moodboard to the final styling, we design and execute interiors and exteriors that reflect how you actually live and work — with our own in-house execution team seeing it through.",
+    icon: Sofa,
+    image: "/assets/services/residential.png",
+    features: [
+      "2D & 3D interior design",
+      "Home interiors",
+      "Shop interiors",
+      "Corporate house interiors",
+      "Landscaping",
+      "Wallpapers",
+      "Paving of stones",
+      "Exterior cladding",
     ],
   },
 ];

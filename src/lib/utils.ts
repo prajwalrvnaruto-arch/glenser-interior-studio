@@ -19,14 +19,14 @@ export function waLink(message: string) {
 /*  Studio business constants                                          */
 /* ------------------------------------------------------------------ */
 
-export const BUSINESS_NAME = "Glenser Interior Studio";
-export const BUSINESS_PHONE = "+91 74116 26375";
-export const BUSINESS_EMAIL = "hello@glenserstudio.com";
+export const BUSINESS_NAME = "Lines & Designs";
+export const BUSINESS_PHONE = "+91 80 4123 8890";
+export const BUSINESS_EMAIL = "studio@linesanddesigns.in";
 export const BUSINESS_ADDRESS_LINE1 = "No. 42, 2nd Floor, Prestige Centre";
 export const BUSINESS_ADDRESS_LINE2 = "Richmond Road, Bengaluru 560025";
 export const BUSINESS_HOURS = "Mon – Sat · 10:00 AM – 7:00 PM";
 export const WHATSAPP_GREETING =
-  "Hello Glenser Interior Studio, I'm interested in your interior design services.";
+  "Hello Lines & Designs, I'm interested in your design and construction services.";
 export const FORM_ENDPOINT = "https://api.web3forms.com/submit";
 export const FORM_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
 export const GOOGLE_MAPS_EMBED_URL =
