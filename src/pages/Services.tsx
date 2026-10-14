@@ -19,7 +19,7 @@ export function Services() {
           </>
         }
         description="Five practice areas under one roof — so your project moves forward without you ever having to translate between architect, contractor and designer."
-        image="/assets/services/residential.png"
+        image="/assets/services/residential.webp"
       />
 
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">

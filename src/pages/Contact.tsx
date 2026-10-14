@@ -208,7 +208,7 @@ export function Contact() {
           </>
         }
         description="Drop by the studio, call, or send a message — we'd love to hear what you're dreaming up."
-        image="/assets/contact/contact-bg.png"
+        image="/assets/contact/contact-bg.webp"
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">

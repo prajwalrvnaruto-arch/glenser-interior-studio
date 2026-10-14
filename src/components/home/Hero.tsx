@@ -31,7 +31,7 @@ export function Hero() {
       `}</style>
       {/* Desktop hero image */}
       <img
-        src="/assets/hero/hero-desktop.png"
+        src="/assets/hero/hero-desktop.webp"
         alt="Serene luxury living room with Bengaluru city views"
         className="absolute inset-0 hidden h-full w-full object-cover object-center sm:block"
         fetchPriority="high"
@@ -39,7 +39,7 @@ export function Hero() {
       />
       {/* Mobile hero image */}
       <img
-        src="/assets/hero/hero-mobile.png"
+        src="/assets/hero/hero-mobile.webp"
         alt="Warm minimalist double-height living room"
         className="hero-pan absolute inset-0 block h-full w-full object-cover object-center sm:hidden"
         fetchPriority="high"

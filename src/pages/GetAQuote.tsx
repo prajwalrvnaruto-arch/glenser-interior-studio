@@ -18,7 +18,7 @@ export function GetAQuote() {
           </>
         }
         description="A few details help us prepare a realistic, itemised estimate. Nothing here is binding — it's the start of the conversation."
-        image="/assets/contact/consultation-banner.png"
+        image="/assets/contact/consultation-banner.webp"
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">

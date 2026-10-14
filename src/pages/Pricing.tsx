@@ -37,7 +37,7 @@ export function Pricing() {
           </>
         }
         description="Two ways to get started — a design package to plan your home, and a construction package to build it. Every rate is per square foot, laid out so you know exactly what's included."
-        image="/assets/services/architecture.png"
+        image="/assets/services/architecture.webp"
       />
 
       {/* Architectural Design Packages */}

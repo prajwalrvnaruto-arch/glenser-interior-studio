@@ -23,13 +23,13 @@ export const PROJECTS: Project[] = [
       "A ground-floor residence for a young family, designed around warm minimalism — layered oak, travertine and soft neutrals that turn long Bangalore days into golden light.",
     outcome:
       "Open-plan living, a modular kitchen with city views and a serene master suite, delivered as a complete turnkey interior.",
-    cover: "/assets/portfolio/project01-lux-living.png",
+    cover: "/assets/portfolio/project01-lux-living.webp",
     images: [
-      "/assets/portfolio/project01-lux-living.png",
-      "/assets/portfolio/project01-living.png",
-      "/assets/portfolio/project01-kitchen.png",
-      "/assets/portfolio/project01-bedroom.png",
-      "/assets/portfolio/project01-console.png",
+      "/assets/portfolio/project01-lux-living.webp",
+      "/assets/portfolio/project01-living.webp",
+      "/assets/portfolio/project01-kitchen.webp",
+      "/assets/portfolio/project01-bedroom.webp",
+      "/assets/portfolio/project01-console.webp",
     ],
   },
   {
@@ -43,12 +43,12 @@ export const PROJECTS: Project[] = [
       "Japanese restraint meets Scandinavian warmth in this 3 BHK — low furniture, natural materials and a dining space made for slow Sunday mornings.",
     outcome:
       "A calm, clutter-free apartment with custom storage that disappears behind oak and paper-laminated surfaces.",
-    cover: "/assets/portfolio/project02-living.png",
+    cover: "/assets/portfolio/project02-living.webp",
     images: [
-      "/assets/portfolio/project02-living.png",
-      "/assets/portfolio/project02-dining.png",
-      "/assets/portfolio/project02-kitchen.png",
-      "/assets/portfolio/project02-bedroom.png",
+      "/assets/portfolio/project02-living.webp",
+      "/assets/portfolio/project02-dining.webp",
+      "/assets/portfolio/project02-kitchen.webp",
+      "/assets/portfolio/project02-bedroom.webp",
     ],
   },
   {
@@ -62,11 +62,11 @@ export const PROJECTS: Project[] = [
       "A double-height villa living room with sculptural lighting and a dining sanctuary — architecture and interiors resolved as one continuous composition.",
     outcome:
       "A gallery-like private residence designed for entertaining, fusing warm minimalism with monumental space.",
-    cover: "/assets/portfolio/project03-villa.png",
+    cover: "/assets/portfolio/project03-villa.webp",
     images: [
-      "/assets/portfolio/project03-villa.png",
-      "/assets/portfolio/project03-sunlit.png",
-      "/assets/portfolio/project03-dining.png",
+      "/assets/portfolio/project03-villa.webp",
+      "/assets/portfolio/project03-sunlit.webp",
+      "/assets/portfolio/project03-dining.webp",
     ],
   },
   {
@@ -80,11 +80,11 @@ export const PROJECTS: Project[] = [
       "A studio office for a creative team — a warm reception lobby that feels like home, a biophilic work floor, and a focused conference room.",
     outcome:
       "A productivity-first yet welcoming workspace, blending acoustic comfort with a strong brand identity.",
-    cover: "/assets/portfolio/project04-reception.png",
+    cover: "/assets/portfolio/project04-reception.webp",
     images: [
-      "/assets/portfolio/project04-reception.png",
-      "/assets/portfolio/project04-office.png",
-      "/assets/portfolio/project04-conference.png",
+      "/assets/portfolio/project04-reception.webp",
+      "/assets/portfolio/project04-office.webp",
+      "/assets/portfolio/project04-conference.webp",
     ],
   },
 ];

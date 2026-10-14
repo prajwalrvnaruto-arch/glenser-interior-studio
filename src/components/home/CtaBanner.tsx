@@ -9,7 +9,7 @@ export function CtaBanner() {
   return (
     <section className="relative overflow-hidden">
       <img
-        src="/assets/contact/consultation-banner.png"
+        src="/assets/contact/consultation-banner.webp"
         alt="Sunlit minimalist living room"
         loading="lazy"
         className="absolute inset-0 h-full w-full object-cover"

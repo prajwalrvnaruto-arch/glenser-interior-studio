@@ -14,33 +14,33 @@ type Filter = (typeof FILTERS)[number];
 // and process pages) now that the dedicated "completed" gallery images have
 // been removed.
 const COMPLETED_IMAGES = [
-  "/assets/portfolio/project01-lux-living.png",
-  "/assets/portfolio/project01-living.png",
-  "/assets/portfolio/project01-kitchen.png",
-  "/assets/portfolio/project01-bedroom.png",
-  "/assets/portfolio/project01-console.png",
-  "/assets/portfolio/project02-living.png",
-  "/assets/portfolio/project02-dining.png",
-  "/assets/portfolio/project02-kitchen.png",
-  "/assets/portfolio/project02-bedroom.png",
-  "/assets/portfolio/project03-villa.png",
-  "/assets/portfolio/project03-sunlit.png",
-  "/assets/portfolio/project03-dining.png",
-  "/assets/portfolio/project04-reception.png",
-  "/assets/portfolio/project04-office.png",
-  "/assets/portfolio/project04-conference.png",
-  "/assets/services/architecture.png",
-  "/assets/services/residential.png",
-  "/assets/services/commercial.png",
-  "/assets/services/kitchen.png",
-  "/assets/services/bedroom.png",
-  "/assets/services/renovation.png",
-  "/assets/about/exterior.png",
-  "/assets/about/studio.png",
-  "/assets/process/consultation.png",
-  "/assets/process/design.png",
-  "/assets/process/execution.png",
-  "/assets/process/handover.png",
+  "/assets/portfolio/project01-lux-living.webp",
+  "/assets/portfolio/project01-living.webp",
+  "/assets/portfolio/project01-kitchen.webp",
+  "/assets/portfolio/project01-bedroom.webp",
+  "/assets/portfolio/project01-console.webp",
+  "/assets/portfolio/project02-living.webp",
+  "/assets/portfolio/project02-dining.webp",
+  "/assets/portfolio/project02-kitchen.webp",
+  "/assets/portfolio/project02-bedroom.webp",
+  "/assets/portfolio/project03-villa.webp",
+  "/assets/portfolio/project03-sunlit.webp",
+  "/assets/portfolio/project03-dining.webp",
+  "/assets/portfolio/project04-reception.webp",
+  "/assets/portfolio/project04-office.webp",
+  "/assets/portfolio/project04-conference.webp",
+  "/assets/services/architecture.webp",
+  "/assets/services/residential.webp",
+  "/assets/services/commercial.webp",
+  "/assets/services/kitchen.webp",
+  "/assets/services/bedroom.webp",
+  "/assets/services/renovation.webp",
+  "/assets/about/exterior.webp",
+  "/assets/about/studio.webp",
+  "/assets/process/consultation.webp",
+  "/assets/process/design.webp",
+  "/assets/process/execution.webp",
+  "/assets/process/handover.webp",
 ];
 
 export function Projects() {
@@ -62,7 +62,7 @@ export function Projects() {
           </>
         }
         description="A selection of homes and workplaces across Bengaluru — each one a different family, a different street, a different story. Filter by type and take a look inside."
-        image="/assets/portfolio/project01-lux-living.png"
+        image="/assets/portfolio/project01-lux-living.webp"
       />
 
       {/* Filterable grid */}

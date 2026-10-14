@@ -54,7 +54,7 @@ export function About() {
           </>
         }
         description="Lines & Designs is a Bengaluru studio that believes great design is measured in how a space feels — not how it photographs."
-        image="/assets/about/studio.png"
+        image="/assets/about/studio.webp"
       />
 
       {/* Story */}
@@ -62,7 +62,7 @@ export function About() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <AnimatedSection>
             <img
-              src="/assets/about/exterior.png"
+              src="/assets/about/exterior.webp"
               alt="Lines & Designs — modern glass entrance with landscaping"
               loading="lazy"
               className="aspect-[4/5] w-full rounded-3xl object-cover"
@@ -189,7 +189,7 @@ export function About() {
           <AnimatedSection className="order-1 lg:order-2">
             <div className="relative">
               <img
-                src="/assets/about/material-library.png"
+                src="/assets/about/material-library.webp"
                 alt="Warm modern materials showroom with samples"
                 loading="lazy"
                 className="aspect-[4/3] w-full rounded-3xl object-cover"

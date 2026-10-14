@@ -22,7 +22,7 @@ export function Process() {
           </>
         }
         description="Interiors are stressful when they're vague. Ours are the opposite — a transparent, four-step process where you always know what happens next."
-        image="/assets/process/design.png"
+        image="/assets/process/design.webp"
       />
 
       {/* Timeline */}
