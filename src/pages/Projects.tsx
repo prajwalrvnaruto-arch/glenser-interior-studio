@@ -5,6 +5,7 @@ import { ArrowUpRight, MapPin, X, ChevronLeft, ChevronRight, ZoomIn } from "luci
 import { PROJECTS } from "@/data/projects";
 import { PageHero } from "@/components/shared/PageHero";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { ArchVisualsShowcase } from "@/components/projects/ArchVisualsShowcase";
 import { cn } from "@/lib/utils";
 
 const FILTERS = ["All", "Residential", "Farmhouse", "Commercial", "Apartment"] as const;
@@ -300,56 +301,26 @@ export function Projects() {
       </section>
 
       {/* Architectural visuals showcase */}
-      <section className="bg-cream py-16 sm:py-20">
+      <section className="bg-cream py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <AnimatedSection>
-            <p className="font-sans text-[0.7rem] uppercase tracking-[0.3em] text-oak-dark">
-              Design Process
-            </p>
-            <h2 className="mt-3 font-serif text-3xl font-medium text-charcoal sm:text-4xl">
-              From sketch to structure
-            </h2>
-            <p className="mt-3 max-w-2xl font-sans text-sm leading-relaxed text-muted">
-              Every project begins with precise 2D planning, progresses through 3D visualisation and isometric modelling,
-              before our construction team brings it to life on site.
-            </p>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="font-sans text-[0.7rem] uppercase tracking-[0.3em] text-oak-dark">
+                  Architectural Deliverables
+                </p>
+                <h2 className="mt-3 font-serif text-3xl font-medium text-charcoal sm:text-4xl">
+                  Isometrics, blueprints & realisations
+                </h2>
+                <p className="mt-3 max-w-2xl font-sans text-sm leading-relaxed text-muted">
+                  Explore our technical design workflow across residential, commercial, apartment, and farmhouse projects — from CAD floor plans and 3D isometric cutaways to photo-realistic structures.
+                </p>
+              </div>
+            </div>
           </AnimatedSection>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {[
-              { src: "/assets/portfolio/arch/plan-2d.jpg", label: "2D Construction Plan" },
-              { src: "/assets/portfolio/arch/isometric-villa.jpg", label: "Isometric 3D View" },
-              { src: "/assets/portfolio/arch/floor-plan-3d.jpg", label: "3D Floor Plan" },
-              { src: "/assets/portfolio/arch/pencil-farmhouse.jpg", label: "Pencil Sketch" },
-            ].map(({ src, label }, i) => (
-              <AnimatedSection key={src} delay={i * 0.1}>
-                <button
-                  onClick={(e) =>
-                    openCardLightbox(
-                      e,
-                      [
-                        "/assets/portfolio/arch/plan-2d.jpg",
-                        "/assets/portfolio/arch/isometric-villa.jpg",
-                        "/assets/portfolio/arch/floor-plan-3d.jpg",
-                        "/assets/portfolio/arch/pencil-farmhouse.jpg",
-                        "/assets/portfolio/arch/commercial-office.jpg",
-                      ],
-                      i
-                    )
-                  }
-                  className="group w-full overflow-hidden rounded-2xl"
-                  aria-label={`View ${label}`}
-                >
-                  <img
-                    src={src}
-                    alt={label}
-                    loading="lazy"
-                    className="aspect-[4/3] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-                  />
-                  <p className="mt-2 text-left font-sans text-xs text-muted">{label}</p>
-                </button>
-              </AnimatedSection>
-            ))}
-          </div>
+
+          {/* Interactive filter pills for architectural showcase */}
+          <ArchVisualsShowcase openLightbox={openCardLightbox} />
         </div>
       </section>
 

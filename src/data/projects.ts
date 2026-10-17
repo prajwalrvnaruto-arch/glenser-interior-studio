@@ -136,11 +136,12 @@ export const PROJECTS: Project[] = [
       "An eco-sensitive weekend retreat — rammed-earth walls, solar-passive design and rainwater harvesting on a working mango orchard.",
     outcome:
       "A farmhouse that produces as much as it consumes; energy-neutral living with timeless local craft.",
-    cover: "/assets/portfolio/arch/pencil-farmhouse.jpg",
+    cover: "/assets/portfolio/arch/farmhouse-real-luxury.jpg",
     images: [
-      "/assets/portfolio/arch/pencil-farmhouse.jpg",
-      "/assets/portfolio/arch/isometric-villa.jpg",
-      "/assets/portfolio/arch/plan-2d.jpg",
+      "/assets/portfolio/arch/farmhouse-real-luxury.jpg",
+      "/assets/portfolio/arch/isometric-farmhouse.jpg",
+      "/assets/portfolio/arch/plan-farmhouse-site.jpg",
+      "/assets/portfolio/arch/farmhouse-real-courtyard.jpg",
     ],
   },
   {
@@ -154,11 +155,12 @@ export const PROJECTS: Project[] = [
       "A family retreat blending stone-rubble walls with contemporary interiors — a fireplace lounge, open-air dining and a lap pool.",
     outcome:
       "A weekend destination that hosts family and guests through the year, built in 11 months.",
-    cover: "/assets/portfolio/project03-villa.webp",
+    cover: "/assets/portfolio/arch/farmhouse-real-courtyard.jpg",
     images: [
-      "/assets/portfolio/project03-villa.webp",
-      "/assets/portfolio/arch/pencil-farmhouse.jpg",
-      "/assets/portfolio/project03-dining.webp",
+      "/assets/portfolio/arch/farmhouse-real-courtyard.jpg",
+      "/assets/portfolio/arch/farmhouse-real-luxury.jpg",
+      "/assets/portfolio/arch/plan-farmhouse-site.jpg",
+      "/assets/portfolio/arch/isometric-farmhouse.jpg",
     ],
   },
   {
@@ -172,11 +174,12 @@ export const PROJECTS: Project[] = [
       "A boutique farmstay with five independent cottages, a central farmhouse kitchen and sustainable water management.",
     outcome:
       "A commercially operating farmstay with 90% occupancy from its first season.",
-    cover: "/assets/portfolio/arch/pencil-farmhouse.jpg",
+    cover: "/assets/portfolio/arch/isometric-farmhouse.jpg",
     images: [
-      "/assets/portfolio/arch/pencil-farmhouse.jpg",
-      "/assets/portfolio/project03-sunlit.webp",
-      "/assets/portfolio/arch/plan-2d.jpg",
+      "/assets/portfolio/arch/isometric-farmhouse.jpg",
+      "/assets/portfolio/arch/farmhouse-real-luxury.jpg",
+      "/assets/portfolio/arch/plan-farmhouse-site.jpg",
+      "/assets/portfolio/arch/farmhouse-real-courtyard.jpg",
     ],
   },
   {
@@ -190,11 +193,12 @@ export const PROJECTS: Project[] = [
       "A working farmhouse for a sugarcane farmer — designed to serve as both a functional agricultural base and a comfortable family home.",
     outcome:
       "Practical and beautiful: grain storage integrated with the architecture, solar power and modern well-water management.",
-    cover: "/assets/portfolio/project03-dining.webp",
+    cover: "/assets/portfolio/arch/farmhouse-real-luxury.jpg",
     images: [
-      "/assets/portfolio/project03-dining.webp",
-      "/assets/portfolio/arch/pencil-farmhouse.jpg",
-      "/assets/portfolio/arch/isometric-villa.jpg",
+      "/assets/portfolio/arch/farmhouse-real-luxury.jpg",
+      "/assets/portfolio/arch/isometric-farmhouse.jpg",
+      "/assets/portfolio/arch/plan-farmhouse-site.jpg",
+      "/assets/portfolio/arch/farmhouse-real-courtyard.jpg",
     ],
   },
 
@@ -213,6 +217,8 @@ export const PROJECTS: Project[] = [
     cover: "/assets/portfolio/project02-living.webp",
     images: [
       "/assets/portfolio/project02-living.webp",
+      "/assets/portfolio/arch/isometric-apartment.jpg",
+      "/assets/portfolio/arch/floor-plan-3d.jpg",
       "/assets/portfolio/project02-dining.webp",
       "/assets/portfolio/project02-kitchen.webp",
       "/assets/portfolio/project02-bedroom.webp",
@@ -232,6 +238,7 @@ export const PROJECTS: Project[] = [
     cover: "/assets/portfolio/bhk-living.webp",
     images: [
       "/assets/portfolio/bhk-living.webp",
+      "/assets/portfolio/arch/isometric-apartment.jpg",
       "/assets/portfolio/bhk-kitchen.webp",
       "/assets/portfolio/bhk-kids.webp",
       "/assets/portfolio/bhk-bathroom.webp",
@@ -253,6 +260,7 @@ export const PROJECTS: Project[] = [
     cover: "/assets/portfolio/arch/floor-plan-3d.jpg",
     images: [
       "/assets/portfolio/arch/floor-plan-3d.jpg",
+      "/assets/portfolio/arch/isometric-apartment.jpg",
       "/assets/portfolio/project02-living.webp",
       "/assets/portfolio/project02-bedroom.webp",
       "/assets/portfolio/project02-kitchen.webp",
@@ -274,6 +282,8 @@ export const PROJECTS: Project[] = [
     cover: "/assets/portfolio/project04-reception.webp",
     images: [
       "/assets/portfolio/project04-reception.webp",
+      "/assets/portfolio/arch/isometric-office.jpg",
+      "/assets/portfolio/arch/plan-commercial-cad.jpg",
       "/assets/portfolio/project04-office.webp",
       "/assets/portfolio/project04-conference.webp",
     ],
@@ -292,9 +302,10 @@ export const PROJECTS: Project[] = [
     cover: "/assets/portfolio/arch/commercial-office.jpg",
     images: [
       "/assets/portfolio/arch/commercial-office.jpg",
+      "/assets/portfolio/arch/isometric-office.jpg",
+      "/assets/portfolio/arch/plan-commercial-cad.jpg",
       "/assets/portfolio/project04-office.webp",
       "/assets/portfolio/project04-conference.webp",
-      "/assets/portfolio/arch/plan-2d.jpg",
     ],
   },
   {
@@ -311,6 +322,8 @@ export const PROJECTS: Project[] = [
     cover: "/assets/portfolio/project04-reception.webp",
     images: [
       "/assets/portfolio/project04-reception.webp",
+      "/assets/portfolio/arch/isometric-office.jpg",
+      "/assets/portfolio/arch/plan-commercial-cad.jpg",
       "/assets/portfolio/project04-conference.webp",
       "/assets/portfolio/arch/commercial-office.jpg",
     ],
