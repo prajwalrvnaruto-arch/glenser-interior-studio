@@ -72,11 +72,11 @@ export const SERVICES: Service[] = [
     icon: HardHat,
     image: "/assets/services/renovation.webp",
     features: [
-      "Commercial buildings",
-      "Residential buildings",
-      "Farm houses",
-      "Renovation of houses",
-      "Layout marking & infrastructure development",
+      "Layouting & site marking",
+      "Building construction",
+      "Home renovations",
+      "Landscaping",
+      "Property management",
     ],
   },
   {

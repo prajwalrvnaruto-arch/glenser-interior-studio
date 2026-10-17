@@ -18,9 +18,48 @@ const NAV_LINKS = [
   { to: "/contact", label: "Contact" },
 ];
 
+/** Running marquee ticker — branding strip shown just below the navbar on the home page. */
+const TICKER_ITEMS = [
+  "Architecture",
+  "Construction",
+  "Interiors",
+  "Estimation",
+  "Civil Works",
+  "Farmhouses",
+  "Villas",
+  "Residential",
+  "Commercial",
+  "Landscaping",
+];
+
+export function BrandingTicker() {
+  // Duplicate the items so the seamless loop works
+  const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
+  return (
+    <div
+      className="overflow-hidden border-b border-charcoal/8 bg-ivory py-2.5"
+      aria-hidden="true"
+    >
+      <div className="marquee-track flex gap-10 whitespace-nowrap">
+        {items.map((item, i) => (
+          <span
+            key={i}
+            className="inline-flex shrink-0 items-center gap-3 font-sans text-[0.65rem] uppercase tracking-[0.28em] text-muted"
+          >
+            <span className="h-1 w-1 rounded-full bg-oak" />
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  // Animate the logo only on the very first render of the page session.
+  const [logoAnimated] = React.useState(true);
   const location = useLocation();
 
   React.useEffect(() => {
@@ -54,12 +93,12 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-5 sm:px-8">
         {/* Brand */}
-        <Link to="/" className="relative z-[51] flex items-center">
-          <Logo className="text-xl sm:text-2xl" />
+        <Link to="/" className="relative z-[51] flex items-center" aria-label="Lines & Designs — Home">
+          <Logo className="text-xl sm:text-2xl" animated={logoAnimated} />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}
@@ -89,7 +128,7 @@ export function Navbar() {
         {/* CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
-            href="tel:+918041238890"
+            href={`tel:${BUSINESS_PHONE.replace(/\s/g, "")}`}
             className="hidden items-center gap-2 font-sans text-sm font-medium text-charcoal transition-colors hover:text-oak-dark xl:flex"
           >
             <Phone className="h-4 w-4" />
@@ -114,8 +153,11 @@ export function Navbar() {
           />
 
           <button
+            id="nav-mobile-toggle"
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav-drawer"
             className="relative z-[51] flex h-11 w-11 items-center justify-center rounded-full text-charcoal transition-colors hover:bg-charcoal/5 lg:hidden"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -127,6 +169,7 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-nav-drawer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -136,6 +179,7 @@ export function Navbar() {
             <div
               className="absolute inset-0 bg-charcoal/50 backdrop-blur-sm"
               onClick={() => setOpen(false)}
+              aria-hidden="true"
             />
             <motion.nav
               initial={{ y: -24, opacity: 0 }}
@@ -143,6 +187,7 @@ export function Navbar() {
               exit={{ y: -24, opacity: 0 }}
               transition={{ duration: 0.35, ease: "easeOut" }}
               className="absolute inset-x-0 top-[4.5rem] mx-4 rounded-3xl border border-charcoal/10 bg-ivory p-6 shadow-2xl shadow-charcoal/20"
+              aria-label="Mobile navigation"
             >
               <div className="flex flex-col divide-y divide-charcoal/8">
                 {NAV_LINKS.map((link, i) => (
@@ -176,7 +221,7 @@ export function Navbar() {
                   }
                 />
                 <a
-                  href="tel:+918041238890"
+                  href={`tel:${BUSINESS_PHONE.replace(/\s/g, "")}`}
                   className="flex h-12 items-center justify-center gap-2 rounded-full border border-charcoal/15 font-sans text-sm font-medium text-charcoal"
                 >
                   <Phone className="h-4 w-4" />
