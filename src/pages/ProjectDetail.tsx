@@ -1,18 +1,23 @@
 import * as React from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { MapPin, ArrowLeft, ArrowRight, Clock3, Ruler, CalendarDays } from "lucide-react";
+import { MapPin, ArrowLeft, ArrowRight, Clock3, Ruler, CalendarDays, Maximize2, ZoomIn } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
 import { cn, BUSINESS_NAME } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { QuoteModal } from "@/components/shared/QuoteModal";
+import { Lightbox } from "@/components/shared/Lightbox";
 
 export function ProjectDetail() {
   const { id } = useParams<{ id: string }>();
   const project = PROJECTS.find((p) => p.id === id);
   const [active, setActive] = React.useState(0);
+  const [lightboxIndex, setLightboxIndex] = React.useState<number | null>(null);
 
-  React.useEffect(() => setActive(0), [id]);
+  React.useEffect(() => {
+    setActive(0);
+    setLightboxIndex(null);
+  }, [id]);
 
   // Per-project page title + meta description (overrides the /projects route meta).
   React.useEffect(() => {
@@ -27,6 +32,18 @@ export function ProjectDetail() {
   const next = () => setActive((i) => (i + 1) % project.images.length);
   const prev = () => setActive((i) => (i - 1 + project.images.length) % project.images.length);
 
+  const openLightbox = (index: number) => {
+    setActive(index);
+    setLightboxIndex(index);
+  };
+  const closeLightbox = () => setLightboxIndex(null);
+  const nextLightbox = () => {
+    setLightboxIndex((i) => (i === null ? 0 : (i + 1) % project.images.length));
+  };
+  const prevLightbox = () => {
+    setLightboxIndex((i) => (i === null ? 0 : (i - 1 + project.images.length) % project.images.length));
+  };
+
   return (
     <>
       {/* Detail hero */}
@@ -40,10 +57,13 @@ export function ProjectDetail() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover cursor-pointer"
+            onClick={() => openLightbox(active)}
           />
         </AnimatePresence>
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/25 to-charcoal/10" />
+        <div 
+          className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/25 to-charcoal/10 cursor-pointer pointer-events-none" 
+        />
 
         <div className="relative mx-auto w-full max-w-7xl px-5 pt-40 sm:px-8">
           <Link
@@ -80,6 +100,14 @@ export function ProjectDetail() {
               className="flex h-11 w-11 items-center justify-center rounded-full border border-ivory/25 text-ivory transition-colors hover:bg-ivory/15"
             >
               <ArrowRight className="h-4 w-4" />
+            </button>
+            <button
+              onClick={() => openLightbox(active)}
+              aria-label="Open pop-up gallery"
+              className="flex h-11 items-center gap-2 rounded-full border border-ivory/25 px-4 text-xs font-medium text-ivory transition-colors hover:bg-ivory/15"
+            >
+              <Maximize2 className="h-3.5 w-3.5" />
+              <span>View Gallery</span>
             </button>
           </div>
         </div>
@@ -119,27 +147,45 @@ export function ProjectDetail() {
             </motion.div>
 
             {/* Thumbnails */}
-            <div className="mt-10 grid grid-cols-4 gap-3 sm:grid-cols-5">
-              {project.images.map((src, i) => (
+            <div className="mt-10">
+              <div className="flex items-center justify-between">
+                <p className="font-sans text-[0.7rem] uppercase tracking-[0.25em] text-oak-dark">
+                  Project Gallery ({project.images.length} photos)
+                </p>
                 <button
-                  key={src}
-                  onClick={() => setActive(i)}
-                  aria-label={`View image ${i + 1}`}
-                  className={cn(
-                    "overflow-hidden rounded-xl border-2 transition-all duration-300",
-                    active === i
-                      ? "border-oak"
-                      : "border-transparent opacity-60 hover:opacity-100"
-                  )}
+                  onClick={() => openLightbox(active)}
+                  className="inline-flex items-center gap-1.5 font-sans text-xs font-medium text-oak-dark transition-colors hover:text-charcoal"
                 >
-                  <img
-                    src={src}
-                    alt=""
-                    loading="lazy"
-                    className="aspect-square w-full object-cover"
-                  />
+                  <Maximize2 className="h-3.5 w-3.5" />
+                  View fullscreen gallery
                 </button>
-              ))}
+              </div>
+
+              <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5">
+                {project.images.map((src, i) => (
+                  <button
+                    key={src}
+                    onClick={() => openLightbox(i)}
+                    aria-label={`Open pop-up gallery for image ${i + 1}`}
+                    className={cn(
+                      "group relative overflow-hidden rounded-2xl border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-oak",
+                      active === i
+                        ? "border-oak shadow-sm"
+                        : "border-transparent opacity-80 hover:border-oak/40 hover:opacity-100"
+                    )}
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} photo ${i + 1}`}
+                      loading="lazy"
+                      className="aspect-square w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-charcoal/30 opacity-0 backdrop-blur-[1px] transition-opacity duration-200 group-hover:opacity-100">
+                      <ZoomIn className="h-5 w-5 text-ivory drop-shadow-md" />
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -215,6 +261,16 @@ export function ProjectDetail() {
           </Link>
         </div>
       </section>
+
+      {/* Pop-up Gallery Lightbox */}
+      <Lightbox
+        images={project.images}
+        index={lightboxIndex}
+        onClose={closeLightbox}
+        onPrev={prevLightbox}
+        onNext={nextLightbox}
+        title={project.title}
+      />
     </>
   );
 }

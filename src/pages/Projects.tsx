@@ -1,11 +1,12 @@
 import * as React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, MapPin, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+import { ArrowUpRight, MapPin, ZoomIn } from "lucide-react";
 import { PROJECTS } from "@/data/projects";
 import { PageHero } from "@/components/shared/PageHero";
 import { AnimatedSection } from "@/components/shared/AnimatedSection";
 import { ArchVisualsShowcase } from "@/components/projects/ArchVisualsShowcase";
+import { Lightbox } from "@/components/shared/Lightbox";
 import { cn } from "@/lib/utils";
 
 const FILTERS = ["All", "Residential", "Farmhouse", "Commercial", "Apartment"] as const;
@@ -41,98 +42,6 @@ const COMPLETED_IMAGES = [
   "/assets/process/execution.webp",
   "/assets/process/handover.webp",
 ];
-
-/* ─────────────────────────────────────────────────────────────────── */
-/*  Shared Lightbox component                                           */
-/* ─────────────────────────────────────────────────────────────────── */
-interface LightboxProps {
-  images: string[];
-  index: number | null;
-  onClose: () => void;
-  onPrev: () => void;
-  onNext: () => void;
-}
-
-function Lightbox({ images, index, onClose, onPrev, onNext }: LightboxProps) {
-  // Keyboard support
-  React.useEffect(() => {
-    if (index === null) return;
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft") onPrev();
-      if (e.key === "ArrowRight") onNext();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [index, onClose, onPrev, onNext]);
-
-  return (
-    <AnimatePresence>
-      {index !== null && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, ease: "easeOut" }}
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-charcoal/92 p-4 backdrop-blur-sm"
-          onClick={onClose}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Image lightbox"
-        >
-          {/* Close */}
-          <button
-            id="lightbox-close"
-            onClick={onClose}
-            aria-label="Close lightbox"
-            className="lightbox-btn absolute right-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-ivory/10 text-ivory transition-colors hover:bg-ivory/20"
-          >
-            <X className="h-5 w-5" />
-          </button>
-
-          {/* Image */}
-          <motion.img
-            key={index}
-            src={images[index]}
-            alt={`Project photo ${index + 1} of ${images.length}`}
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            onClick={(e) => e.stopPropagation()}
-            className="max-h-[85vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
-            draggable={false}
-          />
-
-          {/* Navigation + counter */}
-          {images.length > 1 && (
-            <div
-              className="absolute bottom-6 flex items-center gap-3"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={onPrev}
-                className="lightbox-btn flex h-10 w-10 items-center justify-center rounded-full bg-ivory/10 text-ivory transition-colors hover:bg-ivory/20"
-                aria-label="Previous image"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <span className="font-sans text-sm text-ivory/80 tabular-nums">
-                {index + 1} / {images.length}
-              </span>
-              <button
-                onClick={onNext}
-                className="lightbox-btn flex h-10 w-10 items-center justify-center rounded-full bg-ivory/10 text-ivory transition-colors hover:bg-ivory/20"
-                aria-label="Next image"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-            </div>
-          )}
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-}
 
 /* ─────────────────────────────────────────────────────────────────── */
 /*  Projects page                                                       */
